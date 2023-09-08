@@ -1,0 +1,108 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.header {
+    z-index: 2;
+    position: fixed;
+    height: 100vh;
+    width: max-content;
+    display: flex;
+    align-items: start;
+    background-color: $white;
+}
+
+.header_container {
+    padding: 20px;
+    display: grid;
+    align-items: start;
+    justify-items: center;
+}
+
+.logo {
+    font-size: 22px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .3s ease;
+}
+
+.fade-leave-to,
+.fade-enter-from {
+    opacity: 0;
+}
+
+.fade-enter-to,
+.fade-leave-from {
+    opacity: 1;
+}
+
+.add {
+    margin-top: 200px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: $black;
+    color: $white;
+    @include shadow;
+    transition: opacity .3s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 1;
+    }
+}
+
+.type_color {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 15px;
+}
+
+.add_color {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    @include shadow;
+    transition: opacity .3s ease, transform .3s ease;
+
+    &:hover {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+
+    &:active {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.red {
+    background: $red;
+}
+
+.blue {
+    background: $blue;
+}
+
+.green {
+    background: $green;
+}
+
+.pink {
+    background: $pink;
+}
+
+.yellow {
+    background: $yellow;
+}
